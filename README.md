@@ -30,7 +30,8 @@ $messageBuilder = new ArrayMessageBuilder( [
 ] );
 
 function someCode( MessageBuilder $messageBuilder ) {
-	$messageBuilder->getMessage( 'hello-something', [ 'world' ] ); // Returns 'Hello, world!'
+	// Returns 'Hello, world!'
+	$messageBuilder->getMessage( 'hello-something', [ 'world' ] );
 }
 ```
 
