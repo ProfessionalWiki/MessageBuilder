@@ -5,5 +5,6 @@ parameters:
 	level: 10
 	paths:
 		- src
+	reportUnmatchedIgnoredErrors: false
 	ignoreErrors:
 		- '#no value type specified in iterable type array\.$#'
