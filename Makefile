@@ -11,6 +11,7 @@ coverage-html:
 psalm:
 	./vendor/bin/psalm
 
+# docker run --rm --interactive --tty --volume $PWD:/app -w /app --volume ~/.composer:/composer --user $(id -u):$(id -g) composer:2 ./vendor/bin/psalm --no-cache --set-baseline=psalm-baseline.xml
 psalm-baseline:
 	./vendor/bin/psalm --set-baseline=psalm-baseline.xml
 

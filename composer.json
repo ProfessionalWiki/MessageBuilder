@@ -1,7 +1,16 @@
 {
 	"name": "professional-wiki/message-builder",
 	"license": "GPL-2.0-or-later",
-	"description": "",
+	"description": "Mini message localization library with MessageBuilder interface and implementations",
+	"keywords": [
+		"message",
+		"localization",
+		"i18n",
+		"l10n",
+		"mediawiki",
+		"translatewiki",
+		"translate"
+	],
 	"authors": [
 		{
 			"name": "Professional Wiki",

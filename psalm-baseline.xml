@@ -1,3 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.7.0@d4377c0baf3ffbf0b1ec6998e8d1be2a40971005">
+<files psalm-version="6.8.4@7ee919229d510c5834af3112072f4b12cd7bb51a">
+  <file src="src/ArrayMessageBuilder.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ArrayMessageBuilder]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function buildMessage( string $messageKey, string ...$arguments ): string {]]></code>
+    </MissingOverrideAttribute>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[fn( int $key ) => '$' . (string)( $key + 1 )]]></code>
+    </MixedArgumentTypeCoercion>
+    <UnusedClass>
+      <code><![CDATA[ArrayMessageBuilder]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/FallbackMessageBuilder.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[FallbackMessageBuilder]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function buildMessage( string $messageKey, string ...$arguments ): string {]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[FallbackMessageBuilder]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/MessageBuilderSpy.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[MessageBuilderSpy]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function buildMessage( string $messageKey, string ...$arguments ): string {]]></code>
+    </MissingOverrideAttribute>
+    <MixedPropertyTypeCoercion>
+      <code><![CDATA[$this->buildMessageCalls]]></code>
+    </MixedPropertyTypeCoercion>
+    <UnusedClass>
+      <code><![CDATA[MessageBuilderSpy]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/TranslationsLoader/JsonFileLoader.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[JsonFileLoader]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function load( string $languageCode ): array {]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[JsonFileLoader]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/TranslationsLoader/Loader.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[load]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/TranslationsLoader/LoaderException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[LoaderException]]></code>
+    </ClassMustBeFinal>
+  </file>
+  <file src="src/UnknownMessageKey.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[UnknownMessageKey]]></code>
+    </ClassMustBeFinal>
+  </file>
 </files>
