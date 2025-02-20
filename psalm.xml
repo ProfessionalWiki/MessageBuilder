@@ -27,10 +27,5 @@
                 <directory name="src/" />
             </errorLevel>
         </MissingOverrideAttribute>
-        <PossiblyUnusedMethod>
-            <errorLevel type="suppress">
-                <directory name="src/" />
-            </errorLevel>
-        </PossiblyUnusedMethod>
     </issueHandlers>
 </psalm>
