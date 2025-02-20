@@ -37,14 +37,13 @@ jobs:
       - name: Composer install
         run: composer install --no-progress --no-suggest --no-interaction --prefer-dist --optimize-autoloader
 
-      - name: PHPUnit
-        run: |
-          mkdir -p build/logs/phpunit
-          if [ "$COVERAGE" = '1' ]; then
-            vendor/bin/phpunit --coverage-clover build/logs/phpunit/clover.xml --log-junit build/logs/phpunit/junit.xml --colors=always
-          else
-            vendor/bin/phpunit --log-junit build/logs/phpunit/junit.xml --colors=always
-          fi
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit
+        if: matrix.coverage != true
+
+      - name: Run PHPUnit with code coverage
+        run: vendor/bin/phpunit --coverage-clover coverage.xml
+        if: matrix.coverage
 
       - name: Upload code coverage
         uses: codecov/codecov-action@v5
