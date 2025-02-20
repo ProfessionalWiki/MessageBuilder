@@ -1,0 +1,12 @@
+<phpunit colors="true">
+  <coverage includeUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="MessageBuilder">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
