@@ -9,6 +9,9 @@
 
 Message Builder is a small message localization library for PHP.
 
+This library was extracted from the [EDTF library](https://github.com/ProfessionalWiki/EDTF).
+It can be used together with [TranslateWiki](https://translatewiki.net/), though does not depend on it.
+
 ## MessageBuilder interface
 
 ```php
@@ -34,6 +37,8 @@ function someCode( MessageBuilder $messageBuilder ) {
 	$messageBuilder->getMessage( 'hello-something', [ 'world' ] );
 }
 ```
+
+For a real world usage example, see the [EDTF library](https://github.com/ProfessionalWiki/EDTF).
 
 ## Implementations
 
