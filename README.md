@@ -59,6 +59,10 @@ To run all checks run by the GitHub Actions CI, simply run `make`.
 
 ## Release notes
 
+### Version 1.0.1 (2025-02-21)
+
+* Removed superfluous `ext-json` dependency.
+
 ### Version 1.0.0 (2025-02-20)
 
 * Initial release with `ArrayMessageBuilder`, `FallbackMessageBuilder`, and `MessageBuilderSpy` implementations.
