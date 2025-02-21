@@ -6,13 +6,10 @@ namespace ProfessionalWiki\MessageBuilder;
 
 class FallbackMessageBuilder implements MessageBuilder {
 
-	private MessageBuilder $primaryBuilder;
-
-	private MessageBuilder $fallbackBuilder;
-
-	public function __construct( MessageBuilder $primaryBuilder, MessageBuilder $fallbackBuilder ) {
-		$this->primaryBuilder = $primaryBuilder;
-		$this->fallbackBuilder = $fallbackBuilder;
+	public function __construct(
+		private readonly MessageBuilder $primaryBuilder,
+		private readonly MessageBuilder $fallbackBuilder,
+	) {
 	}
 
 	/**
@@ -22,10 +19,11 @@ class FallbackMessageBuilder implements MessageBuilder {
 		try {
 			$message = $this->primaryBuilder->buildMessage( $messageKey, ...$arguments );
 		}
-		catch ( UnknownMessageKey $exception ) {
+		catch ( UnknownMessageKey ) {
 			$message = $this->fallbackBuilder->buildMessage( $messageKey, ...$arguments );
 		}
 
 		return $message;
 	}
+
 }

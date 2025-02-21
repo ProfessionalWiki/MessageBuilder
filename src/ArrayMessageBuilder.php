@@ -7,15 +7,11 @@ namespace ProfessionalWiki\MessageBuilder;
 class ArrayMessageBuilder implements MessageBuilder {
 
 	/**
-	 * @var array<string, string>
-	 */
-	private array $messages;
-
-	/**
 	 * @param array<string, string> $messages
 	 */
-	public function __construct( array $messages ) {
-		$this->messages = $messages;
+	public function __construct(
+		private readonly array $messages
+	) {
 	}
 
 	/**
